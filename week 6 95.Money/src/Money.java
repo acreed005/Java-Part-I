@@ -70,8 +70,6 @@ public class Money {
         if (cents < 10) {
             zero = "0";
         }
-
         return euros + "." + zero + cents + "e";
     }
-
 }
