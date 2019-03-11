@@ -11,10 +11,13 @@ public class Main {
         // adds 100 suitcases into the container it receives as a parameter
         // there is one brick in each suitcase (brick is 4kg)         
         
-        for(int i = 1; i <= 100; i++) {
-            Suitcase s = new Suitcase(i);
-            s.addThing(new Thing("Brick", 4));
-            container.addSuitcase(s);
-        }            
+        for (int weight = 1; weight <= 100; weight++) {
+            Thing thing = new Thing("Brick", weight);
+ 
+            Suitcase suitcase = new Suitcase(weight);
+            suitcase.addThing(thing);
+ 
+            container.addSuitcase(suitcase);
+        }
     }
 }
